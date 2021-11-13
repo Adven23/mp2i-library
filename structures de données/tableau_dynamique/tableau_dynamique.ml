@@ -7,8 +7,8 @@ let copie t1 t2 =
         t2.(i) <- t1.(i) 
     done;;
 
-(* [add e d] permet d'ajouter un élément [e] dans le tableau dynamique [d] *)
-let add e d = 
+(* [ajout e d] permet d'ajouter un élément [e] dans le tableau dynamique [d] *)
+let ajout e d = 
     d.n <- d.n + 1 ;
     if d.n < Array.length d.t then d.t.(d.n) <- e
     else if d.n = 0 then d.t <- [|e|] 
