@@ -1,5 +1,5 @@
 (* création de la table de hachage *)
-type ('k, 'v) hashtable = {t: ('k, 'v) option array; h: 'k -> int} ;;
+type ('k, 'v) hashtable = {t: ('k * 'v) option array; h: 'k -> int} ;;
 
 (* [ajout ht (k, v)] permet d'ajouter un couple clé-élément à une table de hachage [ht] *)
 let ajout ht (k, v) = 
